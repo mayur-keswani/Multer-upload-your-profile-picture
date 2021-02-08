@@ -5,7 +5,7 @@ const ejs=require('ejs');
 const app=express();
 const path=require('path');
 
-const hostname='127.0.0.1';
+//const hostname='127.0.0.1';
 const port= process.env.PORT || 3001;
 
 app.use(express.static("./public")); //just telling the exppress that all static files are in /public directory
@@ -41,6 +41,4 @@ app.post('/upload', (req,res)=>{
     })
 })
 
-app.listen(port,hostname,()=>{
-    console.log(`You are Live on ${hostname}:${port}`);
-  });
+app.listen(port);
